@@ -1,0 +1,93 @@
+@use './_theme.scss';
+@use './_common.scss' as common;
+
+.calendar {
+    @include common.position-fixed;
+    min-width:600px;
+    min-height: 600px;
+    overflow: hidden;
+
+    .top-left {
+        @include common.size(100%, 40%);
+        @include common.flex-row(right, center);
+        font-size: 1.5em;
+        font-weight: 600;
+        svg {
+            padding-left:15px;
+            padding-right:0px;
+        }
+    }
+
+    .header {
+        @include common.size(100%, 80px);
+        @include common.flex-row(center, center);
+        
+        font-size: 1.5em;
+        font-weight: 600;
+        font-family: 'EF_Diary';
+        text-align: center;
+        svg {
+            padding-left:30px;
+            padding-right:30px;
+            vertical-align:middle;
+        }
+    }
+
+    .days {
+        @include common.size(100%, fit-content);
+        @include common.flex-row(space-between, center);
+        font-weight: 600;
+        font-size: 1em;
+        font-family: 'EF_Diary';
+        //padding: 2px;
+        color: theme.$dark-gray-color;
+        .col {
+            @include common.size(13.5%, 20px);
+            @include common.flex-column(center, center);
+            //padding-left: 1%;
+            //background: transparentize(theme.$step-color, 0.6);
+            //border-radius: 10px;
+        }
+    }
+    .body {
+        @include common.size(100%, 89%);
+        @include common.flex-column();
+        font-family: 'EF_Diary';
+        .row {
+            @include common.size(100%, 100%);
+            @include common.flex-row(space-between, center);
+            .col {
+                @include common.size(13.5%, 93%);
+                @include common.flex-row(center, center);
+
+                font-size: 1.3em;
+                span {
+                    margin: 0 0 0 0;
+                }
+                .not-valid {
+                    color: theme.$gray-color;
+                }
+                img {
+                    opacity: 0.1;
+                }
+            }
+            .col.cell.valid {
+                &:hover {
+                    @include common.hover-event();
+                    //@include common.shadow(1.5px, theme.$dark-gray-color, 0.1);
+                    transform: scale(1.01);
+                    border: none;
+                    background: transparentize(theme.$gray-color, 0.5);
+                }
+            }
+            .col.cell.selected {
+                //@include common.shadow(1.5px, theme.$main-color, 0.1);
+                transform: scale(1.02);
+                border: none;
+                background: theme.$sub-color;
+                color: theme.$main-color;
+                font-weight: 600;
+            }
+        }
+    }
+}

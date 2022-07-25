@@ -1,0 +1,70 @@
+@use './_theme.scss';
+
+@mixin size($width: 600px, $height: 600px) {
+    width: $width;
+    height: $height;
+}
+
+@mixin position-fixed {
+    width:600px;
+    height:600px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@mixin shape(
+    $background: transparent,
+    $border: transparent,
+    $border-radius: 0
+) {
+    background: $background;
+    border: $border;
+    border-radius: $border-radius;
+    -webkit-border-radius: $border-radius;
+}
+@mixin shadow($size: 2px, $color: black, $amount: 0.5) {
+    box-shadow: $size $size 0px 0px transparentize($color, $amount);
+}
+
+@mixin font(
+    $color: black,
+    $font-family: theme.$description-font,
+    $font-size: 1em,
+    $font-weight: 500
+) {
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@font-face {
+    font-family: 'EF_Diary';
+    src: url('../fonts/EF_Diary.woff') format('woff');
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-column($justify-content: center, $align-items: center) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin flex-row($justify-content: center, $align-items: center) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin hover-event {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
