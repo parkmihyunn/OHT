@@ -7,15 +7,18 @@ import { isSameMonth, isSameDay, addDays, parse } from 'date-fns';
 const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
     return (
         <div>
-            <div className="top-right">
-                <Icon icon="ep:menu" onClick />
-            </div>
-            <div className="top-left">
-                <div class="notifications">
-                <Icon icon="ep:bell" onClick />
+            <div className="menu">
+                <div className="top-left">
+                    <Icon icon="ep:menu"/>
                 </div>
-                <div class="user">
-                <Icon icon="ep:user" onClick />
+                <div className="top-right">
+                    <div class="notifications">
+                        <Icon icon="ep:bell"/>
+                        <p> 마우스 오버시 알림메세지 </p>
+                    </div>
+                    <div class="user">
+                        <Icon icon="ep:user"/>
+                    </div>
                 </div>
             </div>
             
@@ -115,6 +118,7 @@ export const App = () => {
     };
     return (
         <div className="calendar">
+            
             <RenderHeader
                 currentMonth={currentMonth}
                 prevMonth={prevMonth}
