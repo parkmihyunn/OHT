@@ -7,6 +7,9 @@ import { isSameMonth, isSameDay, addDays, parse } from 'date-fns';
 const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
     return (
         <div>
+            <div className="top-right">
+                <Icon icon="pepicons:paint-pallet" onClick />
+            </div>
             <div className="top-left">
                 <Icon icon="ion:notifications-circle-outline" onClick />
                 <Icon icon="carbon:user-avatar-filled-alt" onClick />
@@ -122,4 +125,5 @@ export const App = () => {
         </div>
     );
 };
+
 export default App;

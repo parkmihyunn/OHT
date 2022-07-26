@@ -1,13 +1,15 @@
 @use './_theme.scss';
 
-@mixin size($width: 600px, $height: 600px) {
+@mixin size($width: 800px, $height: 800px) {
     width: $width;
     height: $height;
 }
 
-@mixin position-fixed {
-    width:600px;
-    height:600px;
+@mixin position {
+    width:800px;
+    height:800px;
+    min-width: 800px;
+    min-height: 800px;
     position: absolute;
     left: 0;
     right: 0;
