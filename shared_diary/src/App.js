@@ -8,11 +8,15 @@ const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
     return (
         <div>
             <div className="top-right">
-                <Icon icon="pepicons:paint-pallet" onClick />
+                <Icon icon="ep:menu" onClick />
             </div>
             <div className="top-left">
-                <Icon icon="ion:notifications-circle-outline" onClick />
-                <Icon icon="carbon:user-avatar-filled-alt" onClick />
+                <div class="notifications">
+                <Icon icon="ep:bell" onClick />
+                </div>
+                <div class="user">
+                <Icon icon="ep:user" onClick />
+                </div>
             </div>
             
             <div className="header row">

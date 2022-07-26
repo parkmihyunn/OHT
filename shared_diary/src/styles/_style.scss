@@ -16,6 +16,7 @@
             padding-left:13px;
         }
     }
+    
     .top-left {
         @include common.size(100%, 40%);
         @include common.flex-row(right, center);
@@ -26,7 +27,7 @@
         }
         background-color: rgb(255, 237, 205);
     }
-
+    
     .header {
         @include common.size(100%, 60px);
         @include common.flex-row(center, center);
