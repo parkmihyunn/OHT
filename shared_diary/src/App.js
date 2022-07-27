@@ -118,7 +118,6 @@ export const App = () => {
     };
     return (
         <div className="calendar">
-            
             <RenderHeader
                 currentMonth={currentMonth}
                 prevMonth={prevMonth}
