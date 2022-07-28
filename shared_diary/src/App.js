@@ -3,8 +3,18 @@ import { Icon } from '@iconify/react';
 import { format, addMonths, subMonths } from 'date-fns';
 import { startOfMonth, endOfMonth, startOfWeek, endOfWeek } from 'date-fns';
 import { isSameMonth, isSameDay, addDays, parse } from 'date-fns';
+import axios from 'axios'
 
 const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
+    const logout = () => {
+        axios.get("http://127.0.0.1:8000/logout/")
+        .then(res => {
+            console.log(res.data);
+        }).catch(err => {
+            console.log(err);
+      });
+    }
+
     return (
         <div>
             <div className="menu">
@@ -12,16 +22,16 @@ const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
                     <Icon icon="ep:menu"/>
                 </div>
                 <div className="top-right">
-                    <div class="notifications">
+                    <div className="notifications">
                         <Icon icon="ep:bell"/>
                         <p> 마우스 오버시 알림메세지 </p>
                     </div>
-                    <div class="user">
+                    <div className="user">
                         <Icon icon="ep:user"/>
                     </div>
                 </div>
             </div>
-            
+            <button onClick={logout}>로그아웃</button>
             <div className="header row">
                 <div className="col col-start">
                     <Icon icon="ep:arrow-left-bold" onClick={prevMonth} />
