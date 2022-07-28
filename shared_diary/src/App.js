@@ -19,7 +19,7 @@ const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
         <div>
             <div className="menu">
                 <div className="top-left">
-                    <Icon icon="ep:menu"/>
+                    <Icon icon="ep:edit-pen"/>
                 </div>
                 <div className="top-right">
                     <div className="notifications">
