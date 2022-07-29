@@ -21,6 +21,9 @@
             padding-left:13px;
         }
     }
+    .pen-icon:visited {
+        color:black;
+    }
     
     .top-right {
         @include common.size(100%, 40%);
@@ -92,8 +95,8 @@
         border: none;
         background-color:rgb(255, 237, 205);
         position: absolute;
-        top:5%;
-        left: 91.5%;
+        top:1.9%;
+        left: 82%;
     }
     .logout_btn p1{
         font-size: 1em;
@@ -172,3 +175,25 @@
     }
 
 }
+
+.editer{
+    @include common.position;
+    min-width:800px;
+    min-height: 800px;
+    overflow: hidden;
+    scroll-snap-type: none;
+    font-family: 'EF_Diary';
+    
+    .head{
+        background-color:  rgb(255, 237, 205);
+        padding-top: 10px;
+        padding-bottom: 90px;
+        padding-left: 10px;
+        position: relative;
+        font-size: 1.5em;
+    }
+    .back_arrow:visited{
+        color:black;
+    }
+}
+
