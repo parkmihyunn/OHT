@@ -38,7 +38,7 @@ class EditorComponent extends Component{
             <div className="editer">
                 <div className="head">
                     <Link className="back_arrow" to="/">
-                        <Icon icon="ep:arrow-left-bold"/>
+                        <Icon icon="ep:check"/>
                     </Link>
                 </div>
                 <div>

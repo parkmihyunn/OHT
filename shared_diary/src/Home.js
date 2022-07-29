@@ -6,15 +6,15 @@ import { startOfMonth, endOfMonth, startOfWeek, endOfWeek } from 'date-fns';
 import { isSameMonth, isSameDay, addDays, parse } from 'date-fns';
 import axios from 'axios'
 
-    const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
-        const logout = () => {
-            axios.get("http://127.0.0.1:8000/logout/")
-            .then(res => {
-                console.log(res.data);
-            }).catch(err => {
-                console.log(err);
-        });
-        }
+const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
+    const logout = () => {
+        axios.get("http://127.0.0.1:8000/logout/")
+        .then(res => {
+            console.log(res.data);
+        }).catch(err => {
+            console.log(err);
+    });
+    }
 
     return (
         <div>
