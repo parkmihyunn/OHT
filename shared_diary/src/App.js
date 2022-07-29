@@ -30,8 +30,11 @@ const RenderHeader = ({ currentMonth, prevMonth, nextMonth }) => {
                         <Icon icon="ep:user"/>
                     </div>
                 </div>
+                <button className="logout_btn" onClick={logout}>
+                    <p1>로그아웃</p1>
+                </button>
             </div>
-            <button onClick={logout}>로그아웃</button>
+            
             <div className="header row">
                 <div className="col col-start">
                     <Icon icon="ep:arrow-left-bold" onClick={prevMonth} />

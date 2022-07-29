@@ -7,6 +7,11 @@
     min-height: 800px;
     overflow: hidden;
     scroll-snap-type: none;
+    font-family: 'EF_Diary';
+    
+    .menu {
+        background-color:  rgb(255, 237, 205);
+    }
 
     .top-left {
         position:absolute;
@@ -25,7 +30,6 @@
         svg {
             padding-right:13px;
         }
-        background-color: rgb(255, 237, 205);
 
         .notifications:hover p{
             display : block;
@@ -35,7 +39,6 @@
         }
     
         .notifications p{
-            font-family: 'EF_Diary';
             margin : 2px 0 0 0;
             display: none;
             text-align: left;
@@ -84,6 +87,21 @@
             100% { opacity:100%; }
         }
     }
+
+    .logout_btn{
+        border: none;
+        background-color:rgb(255, 237, 205);
+        position: absolute;
+        top:5%;
+        left: 91.5%;
+    }
+    .logout_btn p1{
+        font-size: 1em;
+        font-family: 'EF_Diary';
+    }
+    .logout_btn:active {
+        background-color: rgb(255, 227, 179);;     
+      }
     
     .header {
         @include common.size(100%, 60px);
@@ -91,14 +109,13 @@
         
         font-size: 1.5em;
         font-weight: 600;
-        font-family: 'EF_Diary';
         text-align: center;
         svg {
             padding-left:30px;
             padding-right:30px;
             vertical-align:middle;
         }
-        padding-top: 50px;
+        padding-top: 20px;
         margin-bottom: 30px;
         background-color: rgb(255, 237, 205);
     }
@@ -108,7 +125,6 @@
         @include common.flex-row(space-between, center);
         font-weight: 600;
         font-size: 1em;
-        font-family: 'EF_Diary';
         color: theme.$dark-gray-color;
         .col {
             @include common.size(13.5%, 20px);
@@ -119,7 +135,6 @@
     .body {
         @include common.size(100%, 75%);
         @include common.flex-column();
-        font-family: 'EF_Diary';
         .row {
             @include common.size(100%, 100%);
             @include common.flex-row(space-between, center);
