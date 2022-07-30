@@ -12,8 +12,8 @@ const App = () => {
     <div>
       <Router>
         <Switch>
-            <Route exact path="https://oht-3.netlify.app/" component={Home} />
-            <Route exact path="https://oht-3.netlify.app/page" component={Page} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/page" component={Page} />
         </Switch>
       </Router>
     </div>
